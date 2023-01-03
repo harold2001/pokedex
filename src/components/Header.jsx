@@ -15,9 +15,6 @@ export default function Header() {
                alt="pokemón!"
                width={200}
             />
-            <div>
-               {/* <PokemonSpinner /> */}
-            </div>
          </Link>
       </div>
    )

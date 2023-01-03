@@ -1,8 +1,7 @@
 import axios from 'axios'
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import Pokemon from './Pokemon';
-import PokemonSpinner from '../PokemonSpinner';
 
 export default function Pokemones() {
    const [datos, setDatos] = useState([]);

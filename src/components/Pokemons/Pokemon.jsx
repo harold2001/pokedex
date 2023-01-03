@@ -2,8 +2,7 @@ import "../../styleSheets/Pokemon.css"
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Fragment } from 'react';
-import { HashRouter, Link, Route, Routes } from "react-router-dom";
-import PokemonCard from "../PokemonCard";
+import { Link } from "react-router-dom";
 import PokemonSpinner from "../PokemonSpinner";
 
 const Pokemon = ({ pokeapikey, name }) => {
