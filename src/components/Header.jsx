@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
    return (
-      <div className="p-3" id="divHeader">
+      <div className="col-12 text-center p-3 col-sm-10 col-md-11 col-lg-10 col-xl-12" id="divHeader">
          <Link to="/">
             <img
                className="p-0"

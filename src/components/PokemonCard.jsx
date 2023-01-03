@@ -45,7 +45,7 @@ export default function PokemonCard() {
 
   if (loading) {
     return (
-      <div className="d-flex justify-content-center align-items-center" style={{minHeight:"60vh"}}>
+      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "60vh" }}>
         <div>
           <PokemonSpinner />
         </div>
@@ -54,12 +54,12 @@ export default function PokemonCard() {
   }
 
   return (
-    <div className="container p-4">
+    <div className="col-12 text-center p-3 col-md-9 col-lg-7 col-xl-7 col-xxl-6">
       <div className="d-flex">
-        <ContainerSuperior colNumber={"9"}>
+        <ContainerSuperior colNumber={"8"}>
           <p className="m-0 fs-1 fw-bold text-capitalize">{datos.name}</p>
         </ContainerSuperior>
-        <ContainerSuperior colNumber={"3"}>
+        <ContainerSuperior colNumber={"4"}>
           <img src={image} alt={datos.name} />
         </ContainerSuperior>
       </div>
@@ -83,8 +83,10 @@ export default function PokemonCard() {
         </table>
       </div>
 
-      <div className="mt-3">
-        <Link className="btn text-white fw-semibold" to="/" style={{ backgroundColor: "#ef5450" }}>Back</Link>
+      <div className="mt-3 col-12 text-center">
+        <Link className="btn text-white fw-semibold" to="/" style={{ backgroundColor: "#ef5450" }}>
+          Back
+        </Link>
       </div>
     </div>
   )

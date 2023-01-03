@@ -1,10 +1,10 @@
-import "../styleSheets/Pokemon.css"
+import "../../styleSheets/Pokemon.css"
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Fragment } from 'react';
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
-import PokemonCard from "./PokemonCard";
-import PokemonSpinner from "./PokemonSpinner";
+import PokemonCard from "../PokemonCard";
+import PokemonSpinner from "../PokemonSpinner";
 
 const Pokemon = ({ pokeapikey, name }) => {
    const [pokemon, setPokemon] = useState();

@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { Fragment, useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import Pokemon from './Pokemon';
-import PokemonSpinner from './PokemonSpinner';
+import PokemonSpinner from '../PokemonSpinner';
 
 export default function Pokemones() {
    const [datos, setDatos] = useState([]);
@@ -22,7 +22,7 @@ export default function Pokemones() {
    useEffect(() => getData(), []);
 
    return (
-      <div>
+      <div className="col-12 col-sm-11 col-md-11 col-lg-10 col-xl-12">
          <div className="d-flex flex-wrap gap-3 justify-content-center p-4">
             {
                datos.map(pokemon => {
