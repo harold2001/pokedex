@@ -1,0 +1,15 @@
+.border, #containerTable {
+  border-radius: 10px !important;
+  border-color: black !important;
+  background-color: #f4f4f4;
+  box-shadow: 0 3px 10px rgba(58, 58, 58, 0.4);
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+}

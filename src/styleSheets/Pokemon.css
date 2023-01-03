@@ -1,0 +1,35 @@
+.pokemonCard {
+  width: 150px;
+  height: 150px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(56, 56, 56, 0.3);
+  transition: all 0.3s;
+}
+
+.pokemonCard:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #383838;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 20px;
+  backface-visibility: hidden;
+  animation: smoothReveal 0.8s;
+}
+
+img {
+  animation: smoothReveal 0.8s;
+  padding-top: 5px;
+}
+
+.pokemonCard:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
