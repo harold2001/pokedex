@@ -21,34 +21,40 @@ export default function PokemonCard() {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
-  
+
   const getData = () => {
     try {
       setLoading(true);
       axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(res => {
-        const datosPokemon = res.data;
-        const urlImagen = res.data.sprites.front_default;
-        const rasgos = res.data.stats;
-        setLoading(false);
-        setDatos(datosPokemon);
-        setImage(urlImagen);
-        setFeatures(rasgos);
-      })
-    } catch(error) {
+        .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(res => {
+          const datosPokemon = res.data;
+          const urlImagen = res.data.sprites.front_default;
+          const rasgos = res.data.stats;
+          setLoading(false);
+          setDatos(datosPokemon);
+          setImage(urlImagen);
+          setFeatures(rasgos);
+        })
+    } catch (error) {
       console.log(error)
     }
   }
-  
+
   useEffect(() => getData(), []);
 
-  if(loading) {
-    return <PokemonSpinner />
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{minHeight:"60vh"}}>
+        <div>
+          <PokemonSpinner />
+        </div>
+      </div>
+    );
   }
-  
+
   return (
-    <div className="container">
+    <div className="container p-4">
       <div className="d-flex">
         <ContainerSuperior colNumber={"9"}>
           <p className="m-0 fs-1 fw-bold text-capitalize">{datos.name}</p>
@@ -78,7 +84,7 @@ export default function PokemonCard() {
       </div>
 
       <div className="mt-3">
-        <Link className="btn text-white fw-semibold" to="/" style={{backgroundColor:"#ef5450"}}>Back</Link>
+        <Link className="btn text-white fw-semibold" to="/" style={{ backgroundColor: "#ef5450" }}>Back</Link>
       </div>
     </div>
   )
